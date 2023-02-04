@@ -1,4 +1,4 @@
-package com.promineotech;
+package com.promineotech.fish;
 
 public interface ComponentScanMarker {
 

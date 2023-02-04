@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: fish
+    password: fish
+    url: jdbc:mysql://localhost:3306/fish
+logging:
+  level:
+    root: warn
+    '[com.promineotech]': debug

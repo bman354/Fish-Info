@@ -1,4 +1,4 @@
-package com.promineotech.entities;
+package com.promineotech.fish.entities;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,29 +1,36 @@
-package com.promineotech.controller;
+package com.promineotech.fish.controller;
 
-import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import com.promineotech.entities.Species;
+import com.promineotech.fish.entities.Bait;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.servers.Server;
 
-public interface FetchSpeciesController {
+@RequestMapping("/createbaits")
+@OpenAPIDefinition(info = @Info(title = "Baits Service"), servers = {
+        @Server(url = "http://localhost:8080", description = "Local server.")})
+
+public interface CreateBaitsController {
 //@formatter:off
 
   @Operation(
-          summary = "Returns a Species and its fishing recommendations",
-          description = "Returns a Species and a recommended Rod, Reel, Baits, Habitat, and a tip from a Fishing Pro",
+          summary = "Baits",
+          description = "Create, Read, Update, and Delete for all baits",
           responses = {
                   @ApiResponse(
                           responseCode = "200",
-                          description = "A fish species and its recommendations gets returned",
+                          description = "Value is returned successfully",
                           content = @Content(mediaType = "application/json",
-                          schema = @Schema(implementation = Species.class))),
+                          schema = @Schema(implementation = Bait.class))),
 
                   @ApiResponse(
                           responseCode = "400",
@@ -41,16 +48,21 @@ public interface FetchSpeciesController {
                           content = @Content(mediaType = "application/json"))
           },
           parameters = {
-                  @Parameter(
-                          name = "Species Name",
-                          allowEmptyValue = false,
-                          required = true,
-                          description = "the name of species requested, choose either Tarpon, Snook, Redfish, Snapper, Spotted Seatrout, Sheepshead, or Spanish Mackeral"),
+              @Parameter(
+                      name = "create_bait_name",
+                      allowEmptyValue = false,
+                      required = true,
+                      description = "Create a new bait. Input name here"),
+              @Parameter(
+                      name = "create_bait_isNatural",
+                      allowEmptyValue = false,
+                      required = true,
+                      description = "Create a new bait, True here if natural, false if artificial")
           }
   )
 
-  @GetMapping("/species")
+  @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
-  List<Species>fetchSpecies(@RequestParam(required = false)String species);
+  Bait createBait(@RequestParam(required = true)String bait_name, @RequestParam(required = true)Boolean create_bait_isNatural);
   //formatter:on
 }

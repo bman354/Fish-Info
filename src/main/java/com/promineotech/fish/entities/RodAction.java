@@ -1,4 +1,4 @@
-package com.promineotech.entities;
+package com.promineotech.fish.entities;
 
 public enum RodAction {
   LIGHT, MEDIUM, HEAVY
