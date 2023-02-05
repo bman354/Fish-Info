@@ -27,10 +27,10 @@ public class DefaultFetchSpeciesDao implements FetchSpeciesDao {
   private JdbcTemplate jdbcTemplate;
 
   @Autowired
-  private DefaultFetchReelsDao fetchReelsDao;
+  private FetchReelsDao fetchReelsDao;
 
   @Autowired
-  private DefaultFetchRodsDao fetchRodsDao;
+  private FetchRodsDao fetchRodsDao;
 
   @Autowired
   private BaitsDao baitsDao;
