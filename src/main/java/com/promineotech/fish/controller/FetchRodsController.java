@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import com.promineotech.fish.entities.Rod;
 import com.promineotech.fish.entities.RodAction;
-import com.promineotech.fish.entities.Species;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -33,7 +32,7 @@ public interface FetchRodsController {
                           responseCode = "200",
                           description = "A Fishing Rod and its recommendations gets returned",
                           content = @Content(mediaType = "application/json",
-                          schema = @Schema(implementation = Species.class))),
+                          schema = @Schema(implementation = Rod.class))),
 
                   @ApiResponse(
                           responseCode = "400",

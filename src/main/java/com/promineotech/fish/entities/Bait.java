@@ -6,6 +6,7 @@ import lombok.Data;
 @Data
 @Builder
 public class Bait {
+  int bait_pk;
   String bait_id;
   Boolean isNatural;  
 }

@@ -12,7 +12,7 @@ public class CreateBaits implements CreateBaitsController {
   BaitsService baitsService;
   
   @Override
-  public Bait createBait(String bait_name, Boolean create_bait_isNatural) {
-    return baitsService.createBait(bait_name, create_bait_isNatural);
+  public Bait createBait(String create_bait_name, Boolean create_bait_isNatural) {
+    return baitsService.createBait(create_bait_name, create_bait_isNatural);
   }
 }

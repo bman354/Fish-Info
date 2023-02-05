@@ -5,13 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import com.promineotech.fish.entities.Bait;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.info.Info;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.servers.Server;
 
@@ -28,24 +25,19 @@ public interface DeleteBaitsController {
             responses = {
                     @ApiResponse(
                             responseCode = "200",
-                            description = "Bait is deleted successfully",
-                            content = @Content(mediaType = "application/json",
-                            schema = @Schema(implementation = Bait.class))),
+                            description = "Bait is deleted successfully"),
 
                     @ApiResponse(
                             responseCode = "400",
-                            description = "The requested parameters are invalid",
-                            content = @Content(mediaType = "application/json")),
+                            description = "The requested parameters are invalid"),
 
                     @ApiResponse(
                             responseCode = "404",
-                            description = "No bait found with those criteria",
-                            content = @Content(mediaType = "application/json")),
+                            description = "No bait found with those criteria"),
 
                     @ApiResponse(
                             responseCode = "500",
-                            description = "An unplanned error ocurred",
-                            content = @Content(mediaType = "application/json"))
+                            description = "An unplanned error ocurred")
             },
             parameters = {
                 @Parameter(
@@ -58,6 +50,6 @@ public interface DeleteBaitsController {
 
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)
-    Bait deleteBait(@RequestParam(required = false)String delete_bait);
+    void deleteBait(@RequestParam(required = false)String delete_bait);
     //formatter:on
   }

@@ -5,13 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import com.promineotech.fish.entities.Bait;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.info.Info;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.servers.Server;
 
@@ -28,24 +25,19 @@ public interface UpdateBaitsController {
           responses = {
                   @ApiResponse(
                           responseCode = "200",
-                          description = "Value is returned successfully",
-                          content = @Content(mediaType = "application/json",
-                          schema = @Schema(implementation = Bait.class))),
+                          description = "Value is returned successfully"),
 
                   @ApiResponse(
                           responseCode = "400",
-                          description = "The requested parameters are invalid",
-                          content = @Content(mediaType = "application/json")),
+                          description = "The requested parameters are invalid"),
 
                   @ApiResponse(
                           responseCode = "404",
-                          description = "No fish species found with those criteria",
-                          content = @Content(mediaType = "application/json")),
+                          description = "No fish species found with those criteria"),
 
                   @ApiResponse(
                           responseCode = "500",
-                          description = "An unplanned error ocurred",
-                          content = @Content(mediaType = "application/json"))
+                          description = "An unplanned error ocurred")
           },
           parameters = {
 
@@ -75,11 +67,11 @@ public interface UpdateBaitsController {
 
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
-  Bait updateBait(
-      @RequestParam(required = false)String old_bait_name, 
-      @RequestParam(required = false) Boolean old_bait_isNatural,
-      @RequestParam(required = false)String new_bait_name, 
-      @RequestParam(required = false) Boolean new_bait_isNatural);
+  void updateBait(
+      @RequestParam(required = true)String old_bait_name, 
+      @RequestParam(required = true) Boolean old_bait_isNatural,
+      @RequestParam(required = true)String new_bait_name, 
+      @RequestParam(required = true) Boolean new_bait_isNatural);
   //formatter:on
 
 }

@@ -8,7 +8,7 @@ public interface BaitsService {
   
   List<Bait> fetchBaits(String bait_name, Boolean fetch_baits_isNatural);
   
-  Bait updateBait(String oldName, Boolean oldIsNatural, String newName, Boolean newIsNatural);
+  void updateBait(String oldName, Boolean oldIsNatural, String newName, Boolean newIsNatural);
   
-  Bait deleteBait(String bait_name);
+  void deleteBait(String bait_name);
 }

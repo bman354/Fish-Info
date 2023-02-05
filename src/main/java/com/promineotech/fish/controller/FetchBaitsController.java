@@ -38,7 +38,7 @@ public interface FetchBaitsController {
 
               @ApiResponse(
                       responseCode = "404",
-                      description = "No fish species found with those criteria",
+                      description = "No baits found with those criteria",
                       content = @Content(mediaType = "application/json")),
 
               @ApiResponse(

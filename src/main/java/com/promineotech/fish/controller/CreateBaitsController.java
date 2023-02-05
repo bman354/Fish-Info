@@ -63,6 +63,6 @@ public interface CreateBaitsController {
 
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
-  Bait createBait(@RequestParam(required = true)String bait_name, @RequestParam(required = true)Boolean create_bait_isNatural);
+  Bait createBait(@RequestParam(required = true)String create_bait_name, @RequestParam(required = true)Boolean create_bait_isNatural);
   //formatter:on
 }

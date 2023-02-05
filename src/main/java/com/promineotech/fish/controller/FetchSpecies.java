@@ -13,8 +13,8 @@ public class FetchSpecies implements FetchSpeciesController {
   FetchSpeciesService fetchSpeciesService;
   
   @Override
-  public List<Species> fetchSpecies(String species) {
-    return fetchSpeciesService.fetchSpecies(species);
+  public List<Species> fetchSpecies(String fetch_species) {
+    return fetchSpeciesService.fetchSpecies(fetch_species);
   }
 
 }

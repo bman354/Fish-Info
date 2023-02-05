@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import com.promineotech.fish.entities.Reel;
-import com.promineotech.fish.entities.Species;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -32,7 +31,7 @@ public interface FetchReelsController {
                           responseCode = "200",
                           description = "A reel is returned",
                           content = @Content(mediaType = "application/json",
-                          schema = @Schema(implementation = Species.class))),
+                          schema = @Schema(implementation = Reel.class))),
 
                   @ApiResponse(
                           responseCode = "400",
