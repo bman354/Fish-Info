@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS species(
   rod_fk INT,
   reel_fk INT,
   species_id VARCHAR(32) NOT NULL,
-  habitat ENUM('MANGROVES', 'FLATS', 'REEFS', "DEEP HOLES") NOT NULL,
+  habitat ENUM('MANGROVES', 'FLATS', 'REEFS', "DEEP_HOLES") NOT NULL,
   pro_tip text,
   PRIMARY KEY (species_pk),
   FOREIGN KEY (rod_fk) REFERENCES rods(rod_pk) ON DELETE CASCADE,

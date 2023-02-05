@@ -24,10 +24,10 @@ public interface CreateBaitsController {
 
   @Operation(
           summary = "Baits",
-          description = "Create a new bait",
+          description = "Create a new bait, returns the newly created bait and a 201 status",
           responses = {
                   @ApiResponse(
-                          responseCode = "200",
+                          responseCode = "201",
                           description = "Bait is created and returned successfully",
                           content = @Content(mediaType = "application/json",
                           schema = @Schema(implementation = Bait.class))),
@@ -62,7 +62,7 @@ public interface CreateBaitsController {
   )
 
   @GetMapping
-  @ResponseStatus(code = HttpStatus.OK)
+  @ResponseStatus(code = HttpStatus.CREATED)
   Bait createBait(@RequestParam(required = true)String create_bait_name, @RequestParam(required = true)Boolean create_bait_isNatural);
   //formatter:on
 }

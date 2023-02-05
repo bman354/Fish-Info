@@ -33,13 +33,13 @@ INSERT INTO baits (bait_id, is_natural) VALUES('Spoon', FALSE);
 INSERT INTO baits (bait_id, is_natural) VALUES('Gotcha Tube', FALSE);
 
 -- Species
-INSERT INTO species (rod_fk, reel_fk, species_id, habitat, pro_tip) VALUES(1, 1, 'Tarpon', "DEEP HOLES", 'Use a DOA bait buster or equivalent soft rigged swim bait with a bobber. Nobody is better at catching fish than Rodney B. Holder (Your rod holder)');
+INSERT INTO species (rod_fk, reel_fk, species_id, habitat, pro_tip) VALUES(1, 1, 'Tarpon', "DEEP_HOLES", 'Use a DOA bait buster or equivalent soft rigged swim bait with a bobber. Nobody is better at catching fish than Rodney B. Holder (Your rod holder)');
 INSERT INTO species (rod_fk, reel_fk, species_id, habitat, pro_tip) VALUES(2, 2, 'Snook', 'MANGROVES', 'If you fish from land, stick to the night. If you have a boat, look for creek mouths or big drops near the groves');
 INSERT INTO species (rod_fk, reel_fk, species_id, habitat, pro_tip) VALUES(2, 2, 'Redfish', 'MANGROVES', 'Fish slowly, they are everywhere, but they are deeper down in the water column. Redfish are bottom feeders with strong noses and a good sense for vibrations');
 INSERT INTO species (rod_fk, reel_fk, species_id, habitat, pro_tip) VALUES(2, 2, 'Snapper', 'REEFS', 'Avoid trying to use artificial lures, use a lighter line as their eyesight is very good, especially in clear water');
 INSERT INTO species (rod_fk, reel_fk, species_id, habitat, pro_tip) VALUES(3, 3, 'Spotted Seatrout', 'FLATS', 'Bigger trout are solitary, drift over flats and cover ground. If you start catching small trout, move on to find bigger ones');
 INSERT INTO species (rod_fk, reel_fk, species_id, habitat, pro_tip) VALUES(2, 3, 'Sheepshead', 'REEFS', 'Be patient, and bring lots of bait');
-INSERT INTO species (rod_fk, reel_fk, species_id, habitat, pro_tip) VALUES(2, 2, 'Spanish Mackeral', 'DEEP HOLES', 'Just reel, dont twist or jerk the lure, especially when fighting the fish. You will get broken off. Other fish in the school will often try to steal the lure out of its mouth and break you off');
+INSERT INTO species (rod_fk, reel_fk, species_id, habitat, pro_tip) VALUES(2, 2, 'Spanish Mackeral', 'DEEP_HOLES', 'Just reel, dont twist or jerk the lure, especially when fighting the fish. You will get broken off. Other fish in the school will often try to steal the lure out of its mouth and break you off');
 
 -- manually insert FK values from rods/reels. insert into baits_species with PKs from species + baits
 
