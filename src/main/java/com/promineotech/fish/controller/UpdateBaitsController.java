@@ -25,7 +25,7 @@ public interface UpdateBaitsController {
           responses = {
                   @ApiResponse(
                           responseCode = "200",
-                          description = "Value is returned successfully"),
+                          description = "Bait is updated successfully"),
 
                   @ApiResponse(
                           responseCode = "400",

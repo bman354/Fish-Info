@@ -54,7 +54,7 @@ public interface FetchRodsController {
                       name = "fetch_rods",
                       allowEmptyValue = false,
                       required = true,
-                      description = "Action of the requested bait, options are LIGHT, MEDIUM, or HEAVY")
+                      description = "Action of the requested Rod, options are LIGHT, MEDIUM, or HEAVY")
       }
   )
 

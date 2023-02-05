@@ -27,7 +27,7 @@ public interface FetchBaitsController {
       responses = {
               @ApiResponse(
                       responseCode = "200",
-                      description = "Value is returned successfully",
+                      description = "Baits returned successfully",
                       content = @Content(mediaType = "application/json",
                       schema = @Schema(implementation = Bait.class))),
 

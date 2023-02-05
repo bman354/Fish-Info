@@ -63,4 +63,3 @@ public interface FetchSpeciesController {
   List<Species>fetchSpecies(@RequestParam(required = false)String fetch_species);
   //formatter:on
 }
-//console ->_ service -> dao -> database

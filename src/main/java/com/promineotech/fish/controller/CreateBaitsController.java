@@ -24,11 +24,11 @@ public interface CreateBaitsController {
 
   @Operation(
           summary = "Baits",
-          description = "Create, Read, Update, and Delete for all baits",
+          description = "Create a new bait",
           responses = {
                   @ApiResponse(
                           responseCode = "200",
-                          description = "Value is returned successfully",
+                          description = "Bait is created and returned successfully",
                           content = @Content(mediaType = "application/json",
                           schema = @Schema(implementation = Bait.class))),
 
@@ -39,7 +39,7 @@ public interface CreateBaitsController {
 
                   @ApiResponse(
                           responseCode = "404",
-                          description = "No fish species found with those criteria",
+                          description = "No bait made with those criteria",
                           content = @Content(mediaType = "application/json")),
 
                   @ApiResponse(
